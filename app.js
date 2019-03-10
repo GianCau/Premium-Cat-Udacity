@@ -46,7 +46,14 @@ function show(pos){
 
 	name.innerHTML = catObject[pos].name;
 	count.innerHTML = catObject[pos].click;
+	remove()
 	showImg(catObject[pos].img)
+}
+
+
+//remove div
+function remove() {
+
 }
 
 
@@ -55,9 +62,10 @@ function showImg(par) {
 	var img = document.createElement("img");
 	img.style.width = "300px";
 	img.style.height = "300px";
-	img.src = par;
+
+	//img.src = par;
+	img.style.backgroundImage= `url(${par})`;
 	document.getElementById("imageContainer").appendChild(img);
 }
-
 
 //dovro creare un image object
